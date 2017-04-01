@@ -22,20 +22,20 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_90b307cef6c67fdc87435f6f762cf9771edb4bb90edd18f01ab338387a0a0768 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_90b307cef6c67fdc87435f6f762cf9771edb4bb90edd18f01ab338387a0a0768->enter($__internal_90b307cef6c67fdc87435f6f762cf9771edb4bb90edd18f01ab338387a0a0768_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
+        $__internal_b34fcbae962275f4dbed700ebf4cbc775394f7f06286259db0d18422401cf2f5 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b34fcbae962275f4dbed700ebf4cbc775394f7f06286259db0d18422401cf2f5->enter($__internal_b34fcbae962275f4dbed700ebf4cbc775394f7f06286259db0d18422401cf2f5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle:Security:login.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_90b307cef6c67fdc87435f6f762cf9771edb4bb90edd18f01ab338387a0a0768->leave($__internal_90b307cef6c67fdc87435f6f762cf9771edb4bb90edd18f01ab338387a0a0768_prof);
+        $__internal_b34fcbae962275f4dbed700ebf4cbc775394f7f06286259db0d18422401cf2f5->leave($__internal_b34fcbae962275f4dbed700ebf4cbc775394f7f06286259db0d18422401cf2f5_prof);
 
     }
 
     // line 2
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_2b21f5a7fda57d51736ac6e5fd7ec94bc82600ad3f578e4fa04b638a3f32e3c7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2b21f5a7fda57d51736ac6e5fd7ec94bc82600ad3f578e4fa04b638a3f32e3c7->enter($__internal_2b21f5a7fda57d51736ac6e5fd7ec94bc82600ad3f578e4fa04b638a3f32e3c7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_7d24a63a358572c30d0fa7e6d7f5ef1993bd3343f75ddb12047dd290438103c6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d24a63a358572c30d0fa7e6d7f5ef1993bd3343f75ddb12047dd290438103c6->enter($__internal_7d24a63a358572c30d0fa7e6d7f5ef1993bd3343f75ddb12047dd290438103c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 3
         echo "
@@ -75,7 +75,7 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
             <div class=\"cols-sm-10\">
                 <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-user fa\" aria-hidden=\"true\"></i></span>
-                    <input class=\"form-control\" type=\"text\" id=\"username\" name=\"_username\" value=\"";
+                    <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
         // line 21
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 21, $this->getSourceContext()); })()), "html", null, true);
         echo "\" required=\"required\" /><br/>
@@ -90,8 +90,8 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
         echo "</label>
             <div class=\"cols-sm-10\">
                 <div class=\"input-group\">
-                    <span class=\"input-group-addon\"><i class=\"fa fa-user fa\" aria-hidden=\"true\"></i></span>
-                    <input class=\"form-control\" type=\"password\" id=\"password\" name=\"_password\" required=\"required\" /><br/>
+                    <span class=\"input-group-addon\"><i class=\"fa fa-lock fa\" aria-hidden=\"true\"></i></span>
+                    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" /><br/>
                 </div>
             </div>
         </div>
@@ -112,19 +112,19 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
 
 ";
         
-        $__internal_2b21f5a7fda57d51736ac6e5fd7ec94bc82600ad3f578e4fa04b638a3f32e3c7->leave($__internal_2b21f5a7fda57d51736ac6e5fd7ec94bc82600ad3f578e4fa04b638a3f32e3c7_prof);
+        $__internal_7d24a63a358572c30d0fa7e6d7f5ef1993bd3343f75ddb12047dd290438103c6->leave($__internal_7d24a63a358572c30d0fa7e6d7f5ef1993bd3343f75ddb12047dd290438103c6_prof);
 
     }
 
     // line 6
     public function block_co($context, array $blocks = array())
     {
-        $__internal_fbe3fd03d1c27f3ce7eefa84ec22b706415785e4dc46e19bb9ec860d5df2d3c0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fbe3fd03d1c27f3ce7eefa84ec22b706415785e4dc46e19bb9ec860d5df2d3c0->enter($__internal_fbe3fd03d1c27f3ce7eefa84ec22b706415785e4dc46e19bb9ec860d5df2d3c0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "co"));
+        $__internal_82300d8ee5666f54539f24db7bc19fa70e5bca0f16c4525297b63ff747516cb6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82300d8ee5666f54539f24db7bc19fa70e5bca0f16c4525297b63ff747516cb6->enter($__internal_82300d8ee5666f54539f24db7bc19fa70e5bca0f16c4525297b63ff747516cb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "co"));
 
         echo "<h5>Connexion</h5>";
         
-        $__internal_fbe3fd03d1c27f3ce7eefa84ec22b706415785e4dc46e19bb9ec860d5df2d3c0->leave($__internal_fbe3fd03d1c27f3ce7eefa84ec22b706415785e4dc46e19bb9ec860d5df2d3c0_prof);
+        $__internal_82300d8ee5666f54539f24db7bc19fa70e5bca0f16c4525297b63ff747516cb6->leave($__internal_82300d8ee5666f54539f24db7bc19fa70e5bca0f16c4525297b63ff747516cb6_prof);
 
     }
 
@@ -165,7 +165,7 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
             <div class=\"cols-sm-10\">
                 <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-user fa\" aria-hidden=\"true\"></i></span>
-                    <input class=\"form-control\" type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" /><br/>
+                    <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" /><br/>
                 </div>
             </div>
         </div>
@@ -174,8 +174,8 @@ class __TwigTemplate_315c1921d23ba7edb5ed484ae6fed00f9304ac3c04e73b08db667c76c6b
             <label class=\"cols-sm-2 control-label\" for=\"password\">{{ 'Password'|trans({}, 'FOSUserBundle') }}</label>
             <div class=\"cols-sm-10\">
                 <div class=\"input-group\">
-                    <span class=\"input-group-addon\"><i class=\"fa fa-user fa\" aria-hidden=\"true\"></i></span>
-                    <input class=\"form-control\" type=\"password\" id=\"password\" name=\"_password\" required=\"required\" /><br/>
+                    <span class=\"input-group-addon\"><i class=\"fa fa-lock fa\" aria-hidden=\"true\"></i></span>
+                    <input type=\"password\" id=\"password\" name=\"_password\" required=\"required\" /><br/>
                 </div>
             </div>
         </div>
