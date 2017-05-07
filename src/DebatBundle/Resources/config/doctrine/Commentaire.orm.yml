@@ -1,0 +1,25 @@
+DebatBundle\Entity\Commentaire:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\CommentaireRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idEmetteur:
+            type: string
+            length: 255
+            column: id_emetteur
+        idArgument:
+            type: integer
+            column: id_argument
+        contenu:
+            type: string
+            length: 255
+        datePost:
+            type: date
+            column: date_post
+    lifecycleCallbacks: {  }

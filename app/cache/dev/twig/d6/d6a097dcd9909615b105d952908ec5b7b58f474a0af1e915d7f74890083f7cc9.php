@@ -11,13 +11,14 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 
         $this->blocks = array(
             'fos_user_content' => array($this, 'block_fos_user_content'),
+            'debat_bundle' => array($this, 'block_debat_bundle'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b91a3d022f7cd48527d12f6820e8d55d3958bda8f120fd188f4fffe0557de00f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b91a3d022f7cd48527d12f6820e8d55d3958bda8f120fd188f4fffe0557de00f->enter($__internal_b91a3d022f7cd48527d12f6820e8d55d3958bda8f120fd188f4fffe0557de00f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle::layout.html.twig"));
+        $__internal_dddeaf5144c3114b275b4d6793ae318c806c353b29d90726f7f58dfc5d4d4e18 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dddeaf5144c3114b275b4d6793ae318c806c353b29d90726f7f58dfc5d4d4e18->enter($__internal_dddeaf5144c3114b275b4d6793ae318c806c353b29d90726f7f58dfc5d4d4e18_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -25,10 +26,7 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 <head>
     <meta charset=\"UTF-8\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"";
-        // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("Bootstrap/bootstrap.min.css"), "html", null, true);
-        echo "\" />
+    <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"";
         // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("CSS/UserBundle.css"), "html", null, true);
@@ -89,33 +87,44 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
     <div class=\"container\">
         <div class=\"row main\">
             <div class=\"main-login main-center\">
-
-                <h2>Demo Application</h2>
                 ";
-        // line 40
+        // line 38
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 41
-        echo "
-            </div>
+        // line 39
+        echo "            </div>
         </div>
-    </div>
+        ";
+        // line 41
+        $this->displayBlock('debat_bundle', $context, $blocks);
+        // line 42
+        echo "    </div>
 </body>
-</html>
-
-";
+</html>";
         
-        $__internal_b91a3d022f7cd48527d12f6820e8d55d3958bda8f120fd188f4fffe0557de00f->leave($__internal_b91a3d022f7cd48527d12f6820e8d55d3958bda8f120fd188f4fffe0557de00f_prof);
+        $__internal_dddeaf5144c3114b275b4d6793ae318c806c353b29d90726f7f58dfc5d4d4e18->leave($__internal_dddeaf5144c3114b275b4d6793ae318c806c353b29d90726f7f58dfc5d4d4e18_prof);
 
     }
 
-    // line 40
+    // line 38
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_52b904429d64f91fc71462bcca4a3448eca90942c75daaaeb7596d8d969ae11a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_52b904429d64f91fc71462bcca4a3448eca90942c75daaaeb7596d8d969ae11a->enter($__internal_52b904429d64f91fc71462bcca4a3448eca90942c75daaaeb7596d8d969ae11a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_1611893ea81d65ec92c4b06ac0ccbd8e139503a823e8c065ff595c23dc5d397f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1611893ea81d65ec92c4b06ac0ccbd8e139503a823e8c065ff595c23dc5d397f->enter($__internal_1611893ea81d65ec92c4b06ac0ccbd8e139503a823e8c065ff595c23dc5d397f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         
-        $__internal_52b904429d64f91fc71462bcca4a3448eca90942c75daaaeb7596d8d969ae11a->leave($__internal_52b904429d64f91fc71462bcca4a3448eca90942c75daaaeb7596d8d969ae11a_prof);
+        $__internal_1611893ea81d65ec92c4b06ac0ccbd8e139503a823e8c065ff595c23dc5d397f->leave($__internal_1611893ea81d65ec92c4b06ac0ccbd8e139503a823e8c065ff595c23dc5d397f_prof);
+
+    }
+
+    // line 41
+    public function block_debat_bundle($context, array $blocks = array())
+    {
+        $__internal_0e913ff38206701f9ca1173654b47c61f62f2122b10178acdee623dbe7a846b7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0e913ff38206701f9ca1173654b47c61f62f2122b10178acdee623dbe7a846b7->enter($__internal_0e913ff38206701f9ca1173654b47c61f62f2122b10178acdee623dbe7a846b7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
+
+        echo " ";
+        
+        $__internal_0e913ff38206701f9ca1173654b47c61f62f2122b10178acdee623dbe7a846b7->leave($__internal_0e913ff38206701f9ca1173654b47c61f62f2122b10178acdee623dbe7a846b7_prof);
 
     }
 
@@ -131,7 +140,7 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 
     public function getDebugInfo()
     {
-        return array (  112 => 40,  98 => 41,  96 => 40,  88 => 34,  85 => 33,  77 => 29,  69 => 25,  67 => 24,  64 => 23,  55 => 17,  50 => 15,  45 => 14,  43 => 13,  34 => 7,  30 => 6,  23 => 1,);
+        return array (  120 => 41,  109 => 38,  100 => 42,  98 => 41,  94 => 39,  92 => 38,  86 => 34,  83 => 33,  75 => 29,  67 => 25,  65 => 24,  62 => 23,  53 => 17,  48 => 15,  43 => 14,  41 => 13,  32 => 7,  24 => 1,);
     }
 
     public function getSourceContext()
@@ -141,7 +150,7 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 <head>
     <meta charset=\"UTF-8\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" href=\"{{ asset('Bootstrap/bootstrap.min.css') }}\" />
+    <link rel=\"stylesheet\" href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"{{ asset('CSS/UserBundle.css') }}\" />
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css\">
 </head>
@@ -173,16 +182,12 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
     <div class=\"container\">
         <div class=\"row main\">
             <div class=\"main-login main-center\">
-
-                <h2>Demo Application</h2>
                 {% block fos_user_content %}{% endblock fos_user_content %}
-
             </div>
         </div>
+        {% block debat_bundle %} {% endblock debat_bundle %}
     </div>
 </body>
-</html>
-
-{# 'layout.register'|trans({}, 'FOSUserBundle')   'layout.login'|trans({}, 'FOSUserBundle') #}", "UserBundle::layout.html.twig", "/var/www/html/Projet/src/UserBundle/Resources/views/layout.html.twig");
+</html>", "UserBundle::layout.html.twig", "/var/www/html/Projet/src/UserBundle/Resources/views/layout.html.twig");
     }
 }

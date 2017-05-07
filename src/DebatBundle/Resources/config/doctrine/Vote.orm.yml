@@ -1,0 +1,22 @@
+DebatBundle\Entity\Vote:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\VoteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idEmetteur:
+            type: string
+            length: 255
+            column: id_emetteur
+        idDebat:
+            type: integer
+            column: id_debat
+        reponse:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

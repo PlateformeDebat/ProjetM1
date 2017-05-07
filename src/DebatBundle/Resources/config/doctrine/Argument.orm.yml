@@ -1,0 +1,25 @@
+DebatBundle\Entity\Argument:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\ArgumentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idEmetteur:
+            type: string
+            length: 255
+            column: id_emetteur
+        idDebat:
+            type: integer
+            column: id_debat
+        contenu:
+            type: string
+            length: 255
+        detePost:
+            type: date
+            column: dete_post
+    lifecycleCallbacks: {  }

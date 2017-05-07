@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('Bootstrap/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('CSS/UserBundle.css') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
@@ -35,14 +35,10 @@
     <div class="container">
         <div class="row main">
             <div class="main-login main-center">
-
-                <h2>Demo Application</h2>
                 {% block fos_user_content %}{% endblock fos_user_content %}
-
             </div>
         </div>
+        {% block debat_bundle %} {% endblock debat_bundle %}
     </div>
 </body>
 </html>
-
-{# 'layout.register'|trans({}, 'FOSUserBundle')   'layout.login'|trans({}, 'FOSUserBundle') #}

@@ -1,0 +1,24 @@
+DebatBundle\Entity\Jaime:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\JaimeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idEmetteur:
+            type: string
+            length: 255
+            column: id_emetteur
+        idArgument:
+            type: integer
+            nullable: true
+            column: id_argument
+        idCommentaire:
+            type: integer
+            nullable: true
+            column: id_commentaire
+    lifecycleCallbacks: {  }

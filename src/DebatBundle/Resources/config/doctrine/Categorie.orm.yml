@@ -1,0 +1,16 @@
+DebatBundle\Entity\Categorie:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\CategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            unique: true
+    lifecycleCallbacks: {  }

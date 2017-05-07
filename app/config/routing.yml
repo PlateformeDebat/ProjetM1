@@ -1,3 +1,7 @@
+debat:
+    resource: "@DebatBundle/Resources/config/routing.yml"
+    prefix:   /debat
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /

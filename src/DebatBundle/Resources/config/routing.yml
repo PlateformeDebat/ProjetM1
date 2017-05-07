@@ -1,0 +1,15 @@
+debat_homepage:
+    path:     /
+    defaults: { _controller: DebatBundle:HomeGrid:index }
+
+debat_home_grid:
+    path:     /grid
+    defaults: { _controller: DebatBundle:HomeGrid:index }
+
+debat_home_one:
+    path:     /one
+    defaults: { _controller: DebatBundle:HomeOne:index }
+
+debat_categorie_categorie:
+    path:     /categories
+    defaults: { _controller: DebatBundle:Categorie:index }

@@ -105,6 +105,33 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        if (0 === strpos($pathinfo, '/debat')) {
+            // debat_homepage
+            if (rtrim($pathinfo, '/') === '/debat') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'debat_homepage');
+                }
+
+                return array (  '_controller' => 'DebatBundle\\Controller\\HomeGridController::indexAction',  '_route' => 'debat_homepage',);
+            }
+
+            // debat_home_grid
+            if ($pathinfo === '/debat/grid') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\HomeGridController::indexAction',  '_route' => 'debat_home_grid',);
+            }
+
+            // debat_home_one
+            if ($pathinfo === '/debat/one') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\HomeOneController::indexAction',  '_route' => 'debat_home_one',);
+            }
+
+            // debat_categorie_categorie
+            if ($pathinfo === '/debat/categories') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\CategorieController::indexAction',  '_route' => 'debat_categorie_categorie',);
+            }
+
+        }
+
         // user_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

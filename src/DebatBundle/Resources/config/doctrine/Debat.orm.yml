@@ -1,0 +1,48 @@
+DebatBundle\Entity\Debat:
+    type: entity
+    table: null
+    repositoryClass: DebatBundle\Repository\DebatRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        idCreateur:
+            type: string
+            length: 255
+            column: id_createur
+        titre:
+            type: string
+            length: 255
+        categorie1:
+            type: string
+            length: 255
+            column: categorie_1
+        categorie2:
+            type: string
+            length: 255
+            nullable: true
+            column: categorie_2
+        question:
+            type: string
+            length: 255
+        reponse1:
+            type: string
+            length: 255
+            column: reponse_1
+        reponse2:
+            type: string
+            length: 255
+            column: reponse_2
+        dateDebut:
+            type: date
+            column: date_debut
+        dateFin:
+            type: date
+            column: date_fin
+        dateSuppression:
+            type: date
+            column: date_suppression
+    lifecycleCallbacks: {  }
