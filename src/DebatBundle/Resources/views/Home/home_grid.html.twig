@@ -3,8 +3,20 @@
 {% block debat_bundle %}
     <!-- controlleur OK, renvoie un tableau de 6 débats au hasard -->
 
-    {% for debat in tableau %}
-        <li>{{ debat.getId()|e }}</li>
-    {% endfor %}
+
+    <div class="container">
+        <div class="row">
+        {% for debat in tableau %}
+            <div class="col-sm-6 col-md-4 div_grid">
+                <div class="text-center div_grid_in">
+                    <p style="font-weight: bold; font-size: 1.2em;">{{ debat.getTitre()|e }}</p>
+                    <p>{{ debat.getQuestion()|e }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
 
 {% endblock debat_bundle %}

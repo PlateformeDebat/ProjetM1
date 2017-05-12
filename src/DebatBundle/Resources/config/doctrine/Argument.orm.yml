@@ -19,7 +19,7 @@ DebatBundle\Entity\Argument:
         contenu:
             type: string
             length: 255
-        detePost:
+        datePost:
             type: date
-            column: dete_post
+            column: date_post
     lifecycleCallbacks: {  }

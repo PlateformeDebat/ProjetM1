@@ -1,21 +1,18 @@
 {% extends "UserBundle::layout.html.twig" %}
 {% block fos_user_content %}
+<div class="main-login main-center">
 
     <!DOCTYPE html>
-    <h2>Demo Application</h2>
-
-    {% block co %}<h5>Create account</h5>{% endblock %}
+    <h2>Create account</h2>
 
     {{ form_start(form) }}
 
     <div class="form-group">
         <label class="cols-sm-2 control-label" for="username">{{ 'Username'|trans({}, 'FOSUserBundle') }}</label>
-        <div class="cols-sm-10">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                 {{ form_widget(form.username) }}<br/>
             </div>
-        </div>
     </div>
 
     <div class="form-group">
@@ -53,5 +50,6 @@
     <div class="form-group ">
         <input type="submit" class="btn btn-success" id="_submit" name="_submit" value="{{ 'Create'|trans({}, 'FOSUserBundle') }}" />
     </div>
+</div>
 
 {% endblock fos_user_content %}

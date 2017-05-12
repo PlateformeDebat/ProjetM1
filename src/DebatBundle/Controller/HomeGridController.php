@@ -23,8 +23,8 @@ class HomeGridController extends Controller
     public function findDebatByHasard()
     {
         $array_debat = array();
-        for ($i = 0; $i < 3; $i++) {
-            $array_debat[$i] = $this->findDebatById(rand(1, 3));
+        for ($i = 0; $i < 6; $i++) {
+            $array_debat[$i] = $this->findDebatById(rand(1, $this->findDebatAll()));
         };
         return $array_debat;
     }
@@ -32,5 +32,10 @@ class HomeGridController extends Controller
     public function findDebatById($parameter)
     {
         return $this->getDoctrine()->getManager()->getRepository('DebatBundle:Debat')->findOneBy(array('id' => $parameter));
+    }
+
+    public function findDebatAll()
+    {
+        return sizeof($this->getDoctrine()->getManager()->getRepository('DebatBundle:Debat')->findAll());
     }
 }

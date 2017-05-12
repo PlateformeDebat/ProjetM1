@@ -5,6 +5,11 @@
 /*
  * General styles
  */
+
+.container {
+    margin: 20px auto;
+}
+
 #playground-container {
     height: 500px;
     overflow: hidden !important;
@@ -16,10 +21,12 @@ body, html{
     background:url(http://www.tillthecat.com/wp-content/uploads/2014/06/Mauve.jpg);
     font-family: 'Oxygen', sans-serif;
     background-size: cover;
+    padding : 0;
 }
 
 .main{
-    margin:50px 15px;
+    margin:30px 15px;
+    height: auto;
 }
 
 h1.title {
@@ -66,6 +73,8 @@ input::-webkit-input-placeholder {
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+    color: black;
+    width : auto;
 }
 #button {
     border: 1px solid #ccc;
@@ -90,11 +99,11 @@ input::-webkit-input-placeholder {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
 }
 .main-center{
+    background:#99004d;
     margin-top: 30px;
     margin: 0 auto;
+    padding : 10px 20px;
     max-width: 400px;
-    padding: 10px 40px;
-    background:#99004d;
     color: #FFF;
     text-shadow: none;
     -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
@@ -138,4 +147,54 @@ span.input-group-addon i {
 }
 .form-group input[type="checkbox"]:checked + .btn-group > label span:last-child {
     display: none;
+}
+
+.btn-info {
+    background: #99004d;
+    border-color : #99004d;
+    margin : 5px;
+}
+
+.footer {
+    bottom: 0;
+    left: 0; right: 0;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.p_footer {
+    color : white;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+}
+
+.nav-header {
+    padding-bottom: 20px;
+    background-color: inherit;
+    border: 0;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.debat-padding {
+    padding: 5px;
+}
+
+
+.div_grid {
+    padding: 10px;
+    color: white;
+    font-size: medium;
+}
+
+.div_grid_in {
+    border: solid 1px white;
+    padding: 10px;
 }

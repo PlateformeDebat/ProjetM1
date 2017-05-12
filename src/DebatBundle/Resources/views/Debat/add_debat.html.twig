@@ -1,0 +1,113 @@
+{% extends "UserBundle::layout.html.twig" %}
+
+{% block debat_bundle %}
+    <!-- in work -->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Catégories</a></li>
+                <li><a href="#">Afficher mes débats</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Liste de mes débats</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {{ form_start(form) }}
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="titre">{{ 'Titre'|trans({}, 'FOSUserBundle') }}</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.titre) }}<br/>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="question">{{ 'Question'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-at fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.question) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="reponse1">{{ 'Reponse 1'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.reponse1) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="reponse2">{{ 'Reponse 2'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.reponse2) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="categorie1">{{ 'Categorie 1'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.categorie1) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="categorie2">{{ 'Categorie 2'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.categorie2) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="dateDebut">{{ 'Date de début'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.dateDebut) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="dateFin">{{ 'Date de fin'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.dateFin) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="cols-sm-2 control-label" for="dateSuppression">{{ 'Date de suppression'|trans({}, 'FOSUserBundle') }}</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                {{ form_widget(form.dateSuppression) }}<br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        {{ form_widget(form.valider) }}
+    </div>
+
+
+{% endblock debat_bundle %}

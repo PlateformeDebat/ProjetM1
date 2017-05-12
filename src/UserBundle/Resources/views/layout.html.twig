@@ -9,36 +9,72 @@
 </head>
 
 <body>
-
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        Utilisateur connecté : {{ app.user.username }}
-        <a href="{{ path('fos_user_security_logout') }}">
-            <button type="button" class="btn btn-danger">Deconnexion</button>
-            <a href="{{ path('fos_user_change_password') }}">
-                <button type="button" class="btn btn-info">Change password</button>
-            </a>
-        </a>
+            {#<div>Utilisateur connecté : {{ app.user.username }}</div>
+            <a href="{{ path('fos_user_security_logout') }}">
+                <button type="button" class="btn btn-danger">Deconnexion</button>
+                <a href="{{ path('fos_user_change_password') }}">
+                    <button type="button" class="btn btn-info">Change password</button>
+                </a>
+            </a>#}
+
+        <nav class="navbar navbar-default nav-header">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:white; font-weight: bold;" href="#">MasterDebat</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a style="color:white;" href="#">User connected : {{ app.user.username }}</a></li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a style="color:white;" href="{{ path('fos_user_security_logout') }}">
+                                Deconnexion
+                            </a></li>
+                        <li><a style="color:white;" href="{{ path('fos_user_change_password') }}">
+                                Change password
+                            </a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </nav>
+
+        <div style="background-color:white; height:2px; display:block; width:70%; margin: 0 auto;">&nbsp;</div>
+
+
 
     {% else %}
 
-        {% if app.request.attributes.get("_route") == 'fos_user_security_login' %}
             <a href="{{ path('fos_user_registration_register') }}">
                 <button type="button" class="btn btn-info">S'inscrire</button>
             </a>
-        {% else %}
+
             <a href="{{ path('fos_user_security_login') }}">
                 <button type="button" class="btn btn-info">Se Connecter</button>
             </a>
-        {% endif %}
     {% endif %}
 
     <div class="container">
         <div class="row main">
-            <div class="main-login main-center">
-                {% block fos_user_content %}{% endblock fos_user_content %}
-            </div>
+            {% block fos_user_content %}{% endblock fos_user_content %}
         </div>
         {% block debat_bundle %} {% endblock debat_bundle %}
     </div>
+
+    <div style="background-color:white; height:2px; display:block; width:70%; margin: 0 auto; margin-top: 20px;">&nbsp;</div>
+    <div class="footer">
+        <p class="p_footer">MasterDebat</p>
+        <p class="p_footer">Plateforme de débat en ligne</p>
+        <p class="p_footer">Projet M1 2016-2017 | CERI Avignon</p>
+        <p class="p_footer">Christophe GALA / Rémy VILAPLANA</p>
+    </div>
+
 </body>
 </html>

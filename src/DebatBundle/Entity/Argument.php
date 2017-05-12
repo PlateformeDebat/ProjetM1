@@ -30,7 +30,7 @@ class Argument
     /**
      * @var \DateTime
      */
-    private $detePost;
+    private $datePost;
 
 
     /**
@@ -118,25 +118,27 @@ class Argument
     /**
      * Set detePost
      *
-     * @param \DateTime $detePost
+     * @param \DateTime $datePost
      *
      * @return Argument
      */
-    public function setDetePost($detePost)
+    public function setDatePost($datePost)
     {
-        $this->detePost = $detePost;
+        $this->datePost = $datePost;
 
         return $this;
     }
 
     /**
-     * Get detePost
+     * Get datePost
      *
      * @return \DateTime
      */
-    public function getDetePost()
+    public function getDatePost()
     {
-        return $this->detePost;
+        return $this->datePost;
     }
-}
 
+
+
+}

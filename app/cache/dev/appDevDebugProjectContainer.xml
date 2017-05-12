@@ -1914,7 +1914,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>590f51e8bd6447.28779124</argument>
+            <argument>59147cb425ec67.60109215</argument>
           </service>
         </argument>
       </argument>
@@ -2152,8 +2152,8 @@
                 <argument type="collection"/>
                 <call method="setOptions">
                   <argument type="collection">
-                    <argument key="always_use_default_target_path">false</argument>
-                    <argument key="default_target_path">/</argument>
+                    <argument key="default_target_path">/debat</argument>
+                    <argument key="always_use_default_target_path">true</argument>
                     <argument key="login_path">/login</argument>
                     <argument key="target_path_parameter">_target_path</argument>
                     <argument key="use_referer">false</argument>
@@ -2203,7 +2203,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>590f51e8bd6447.28779124</argument>
+            <argument>59147cb425ec67.60109215</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

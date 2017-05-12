@@ -10,6 +10,26 @@ debat_home_one:
     path:     /one
     defaults: { _controller: DebatBundle:HomeOne:index }
 
-debat_categorie_categorie:
+debat_categorie:
     path:     /categories
     defaults: { _controller: DebatBundle:Categorie:index }
+
+debat_my_debats:
+    path:     /mydebats
+    defaults: { _controller: DebatBundle:MyDebats:index }
+
+debat_add_debat:
+    path:     /adddebat
+    defaults: { _controller: DebatBundle:AddDebat:index }
+
+debat_debat:
+    path:     /debat
+    defaults: { _controller: DebatBundle:Debat:index }
+
+vote_debat:
+    path:     /vote
+    defaults: { _controller: DebatBundle:Debat:vote }
+
+argument_debat:
+    path:     /argument
+    defaults: { _controller: DebatBundle:Debat:argument }

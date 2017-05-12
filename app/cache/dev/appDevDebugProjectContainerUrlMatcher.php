@@ -125,9 +125,34 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'DebatBundle\\Controller\\HomeOneController::indexAction',  '_route' => 'debat_home_one',);
             }
 
-            // debat_categorie_categorie
+            // debat_categorie
             if ($pathinfo === '/debat/categories') {
-                return array (  '_controller' => 'DebatBundle\\Controller\\CategorieController::indexAction',  '_route' => 'debat_categorie_categorie',);
+                return array (  '_controller' => 'DebatBundle\\Controller\\CategorieController::indexAction',  '_route' => 'debat_categorie',);
+            }
+
+            // debat_my_debats
+            if ($pathinfo === '/debat/mydebats') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\MyDebatsController::indexAction',  '_route' => 'debat_my_debats',);
+            }
+
+            // debat_add_debat
+            if ($pathinfo === '/debat/adddebat') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\AddDebatController::indexAction',  '_route' => 'debat_add_debat',);
+            }
+
+            // debat_debat
+            if ($pathinfo === '/debat/debat') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\DebatController::indexAction',  '_route' => 'debat_debat',);
+            }
+
+            // vote_debat
+            if ($pathinfo === '/debat/vote') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\DebatController::voteAction',  '_route' => 'vote_debat',);
+            }
+
+            // argument_debat
+            if ($pathinfo === '/debat/argument') {
+                return array (  '_controller' => 'DebatBundle\\Controller\\DebatController::argumentAction',  '_route' => 'argument_debat',);
             }
 
         }

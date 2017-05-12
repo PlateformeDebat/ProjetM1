@@ -2,34 +2,147 @@
 
 namespace DebatBundle\Controller;
 
+use DateTime;
+use DateTimeZone;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use DebatBundle\Entity\Debat;
+use DebatBundle\Entity\Vote;
+use DebatBundle\Entity\Argument;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints\Date;
 
-class DebatController extends DefaultController
+
+/**
+ * Class DebatController
+ * @package DebatBundle\Controller
+ * classe qui gère le débat
+ */
+class DebatController extends Controller
 {
-
-    /** NOUVEAU DEBAT */
-    public function newDebat($createur, $title, $q, $rep1, $rep2, $category1, $category2, $d1, $d2, $d3)
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * affiche le template correspondant
+     */
+    public function indexAction(Request $request)
     {
-        $deb = new Debat();
-        $deb->setTitre($title);
-        $deb->setReponse1($rep1);
-        $deb->setReponse2($rep2);
-        $deb->setQuestion($q);
-        $deb->setCategorie1($category1);
-        $deb->setCategorie2($category2);
-        $deb->setDateDebut($d1);
-        $deb->setDateFin($d2);
-        $deb->setDateSuppression($d3);
-        $deb->setIdCreateur($createur);
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($deb);
-        $em->flush();
+        $deb = $request->query->get('id');
+        return $this->render('DebatBundle:Debat:debat.html.twig', array('argument'=>$this->findDebatById($deb)));
     }
 
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * action qui permet à l'utilisateur de voter pour un débat
+     */
+    public function voteAction(Request $request)
+    {
+        $me = $this->getUser()->getId();
+        $id_debat = $request->request->get('id_debat');
+        $reponse = $request->request->get('reponse');
+
+        if ($this->noVote($id_debat, $me))
+        {
+            $vote = new Vote();
+            $vote->setIdEmetteur($me);
+            $vote->setIdDebat($id_debat);
+            $vote->setReponse($reponse);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($vote);
+            $em->flush();
+
+            return $this->redirectToRoute('debat_home_grid');
+        }
+        else
+            return $this->redirectToRoute('debat_home_grid');
+    }
+
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * fonctions qui permet à l'utilisateur d'argumenter pour une réponse pour laquelle il a déjà voté
+     */
+    public function argumentAction(Request $request)
+    {
+        $me = $this->getUser()->getId();
+        $id_debat = $request->request->get('id_debat');
+        $reponse = $request->request->get('reponse');
+        $texte = $request->request->get('argument');
+
+        $date = new DateTime();
+
+        if ($this->voteForCorrectAnswer($id_debat, $me, $reponse))
+        {
+            $argument = new Argument();
+            $argument->setIdEmetteur($me);
+            $argument->setIdDebat($id_debat);
+            $argument->setContenu($texte);
+            $argument->setDatePost($date);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($argument);
+            $em->flush();
+
+            return $this->redirectToRoute('debat_home_grid');
+        }
+        else
+            return $this->redirectToRoute('debat_home_grid');
+    }
+
+
+    /**
+     * @param $id_debat
+     * @param $id_votant
+     * @return bool
+     * test si l'utilisateur courant a déjà voté pour le débat
+     */
+    public function noVote($id_debat, $id_votant)
+    {
+        $tab = $this->findVoteByIdDebat($id_debat);
+
+        for ($i = 0; $i < sizeof($tab); $i++) {
+            if ($tab[$i]->getIdEmetteur() == $id_votant) {
+                return false;
+            }
+        };
+        return true;
+    }
+
+
+    /**
+     * @param $id_debat
+     * @param $id_votant
+     * @param $reponse
+     * @return bool
+     * cherche si l'utilisateur a voté pour la bonne réponse du bon débat
+     */
+    public function voteForCorrectAnswer($id_debat, $id_votant, $reponse)
+    {
+        $tab = $this->findVoteByIdDebat($id_debat);
+
+        for ($i = 0; $i < sizeof($tab); $i++) {
+            if (($tab[$i]->getIdEmetteur() == $id_votant) && ($tab[$i]->getReponse() == $reponse)) {
+                return true;
+            }
+        };
+        return false;
+
+    }
+
+
+
+    /**
+     * FONCTIONS UTILISEES AILLEURS
+     */
+
     /** ----------------- FIND -------------------- */
+
+    public function findVoteByIdDebat($parameter)
+    {
+        return $this->getDoctrine()->getManager()->getRepository('DebatBundle:Vote')->findBy(array('idDebat' => $parameter));
+    }
 
     /** FIND BY ID */
     public function findDebatById($parameter)

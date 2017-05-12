@@ -21,20 +21,20 @@ class __TwigTemplate_3314c6be9bfabcf29ba0b1dbe95793fe77306a97427b8c658ecc4b81df3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_58c6c49a6394ff32dcc491cbfceed441dbe9011e9bddddc2ba5f64a92a52072b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_58c6c49a6394ff32dcc491cbfceed441dbe9011e9bddddc2ba5f64a92a52072b->enter($__internal_58c6c49a6394ff32dcc491cbfceed441dbe9011e9bddddc2ba5f64a92a52072b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DebatBundle:Categorie:categorie.html.twig"));
+        $__internal_9527e27a0b7881869bc26685d1f24e711a5af549ed4e187aaa299647763fec57 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9527e27a0b7881869bc26685d1f24e711a5af549ed4e187aaa299647763fec57->enter($__internal_9527e27a0b7881869bc26685d1f24e711a5af549ed4e187aaa299647763fec57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DebatBundle:Categorie:categorie.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_58c6c49a6394ff32dcc491cbfceed441dbe9011e9bddddc2ba5f64a92a52072b->leave($__internal_58c6c49a6394ff32dcc491cbfceed441dbe9011e9bddddc2ba5f64a92a52072b_prof);
+        $__internal_9527e27a0b7881869bc26685d1f24e711a5af549ed4e187aaa299647763fec57->leave($__internal_9527e27a0b7881869bc26685d1f24e711a5af549ed4e187aaa299647763fec57_prof);
 
     }
 
     // line 3
     public function block_debat_bundle($context, array $blocks = array())
     {
-        $__internal_63f2c44485d874a6b83a6b10039a80b1cfba2b5c1486dfb576fcb31e6c8b0230 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_63f2c44485d874a6b83a6b10039a80b1cfba2b5c1486dfb576fcb31e6c8b0230->enter($__internal_63f2c44485d874a6b83a6b10039a80b1cfba2b5c1486dfb576fcb31e6c8b0230_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
+        $__internal_c075d00e90a4abeb95c418b92e9960475260de6c2668acc453141cc789968f79 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_c075d00e90a4abeb95c418b92e9960475260de6c2668acc453141cc789968f79->enter($__internal_c075d00e90a4abeb95c418b92e9960475260de6c2668acc453141cc789968f79_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
 
         // line 4
         echo "    <!-- controlleur OK, renvoie un tableau de 1 débat au hasard -->
@@ -50,7 +50,7 @@ class __TwigTemplate_3314c6be9bfabcf29ba0b1dbe95793fe77306a97427b8c658ecc4b81df3
         </div>
     </nav>
 
-    <!-- terminé mais non testé -->
+    <!-- appel controller OK -->
 
     ";
         // line 19
@@ -71,7 +71,7 @@ class __TwigTemplate_3314c6be9bfabcf29ba0b1dbe95793fe77306a97427b8c658ecc4b81df3
 
 ";
         
-        $__internal_63f2c44485d874a6b83a6b10039a80b1cfba2b5c1486dfb576fcb31e6c8b0230->leave($__internal_63f2c44485d874a6b83a6b10039a80b1cfba2b5c1486dfb576fcb31e6c8b0230_prof);
+        $__internal_c075d00e90a4abeb95c418b92e9960475260de6c2668acc453141cc789968f79->leave($__internal_c075d00e90a4abeb95c418b92e9960475260de6c2668acc453141cc789968f79_prof);
 
     }
 
@@ -108,7 +108,7 @@ class __TwigTemplate_3314c6be9bfabcf29ba0b1dbe95793fe77306a97427b8c658ecc4b81df3
         </div>
     </nav>
 
-    <!-- terminé mais non testé -->
+    <!-- appel controller OK -->
 
     {% for categorie in categories %}
         <li>{{ categorie.getNom()|e }}</li>
