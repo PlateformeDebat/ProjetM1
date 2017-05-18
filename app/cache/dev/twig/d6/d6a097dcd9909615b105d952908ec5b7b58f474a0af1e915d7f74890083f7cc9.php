@@ -17,8 +17,8 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_74ca140ecbdb28711e8332632c6817f38015afef2cb2d0c00d836d58a6534103 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_74ca140ecbdb28711e8332632c6817f38015afef2cb2d0c00d836d58a6534103->enter($__internal_74ca140ecbdb28711e8332632c6817f38015afef2cb2d0c00d836d58a6534103_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle::layout.html.twig"));
+        $__internal_388379b439da5e6c3ed4022dd7142a12d5a1b4f4c8a3b2c44f7c01360fa63cc0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_388379b439da5e6c3ed4022dd7142a12d5a1b4f4c8a3b2c44f7c01360fa63cc0->enter($__internal_388379b439da5e6c3ed4022dd7142a12d5a1b4f4c8a3b2c44f7c01360fa63cc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -51,7 +51,10 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
                         <span class=\"icon-bar\"></span>
                         <span class=\"icon-bar\"></span>
                     </button>
-                    <a class=\"navbar-brand\" style=\"color:white; font-weight: bold;\" href=\"#\">MasterDebat</a>
+                    <a class=\"navbar-brand\" style=\"color:white; font-weight: bold; font-size: 2em;\" href=\"";
+            // line 30
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("debat_home_grid");
+            echo "\">MasterDebat</a>
                 </div>
                 <div id=\"navbar\" class=\"navbar-collapse collapse\">
                     <ul class=\"nav navbar-nav\">
@@ -59,17 +62,16 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
             // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), twig_get_attribute($this->env, $this->getSourceContext(), (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 34, $this->getSourceContext()); })()), "user", array()), "username", array()), "html", null, true);
             echo "</a></li>
-
                     </ul>
                     <ul class=\"nav navbar-nav navbar-right\">
                         <li><a style=\"color:white;\" href=\"";
-            // line 38
+            // line 37
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
             echo "\">
                                 Deconnexion
                             </a></li>
                         <li><a style=\"color:white;\" href=\"";
-            // line 41
+            // line 40
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_change_password");
             echo "\">
                                 Change password
@@ -85,36 +87,36 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 
     ";
         } else {
-            // line 54
+            // line 53
             echo "
             <a href=\"";
-            // line 55
+            // line 54
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_registration_register");
             echo "\">
                 <button type=\"button\" class=\"btn btn-info\">S'inscrire</button>
             </a>
 
             <a href=\"";
-            // line 59
+            // line 58
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
             echo "\">
                 <button type=\"button\" class=\"btn btn-info\">Se Connecter</button>
             </a>
     ";
         }
-        // line 63
+        // line 62
         echo "
     <div class=\"container\">
         <div class=\"row main\">
             ";
-        // line 66
+        // line 65
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 67
+        // line 66
         echo "        </div>
         ";
-        // line 68
+        // line 67
         $this->displayBlock('debat_bundle', $context, $blocks);
-        // line 69
+        // line 68
         echo "    </div>
 
     <div style=\"background-color:white; height:2px; display:block; width:70%; margin: 0 auto; margin-top: 20px;\">&nbsp;</div>
@@ -128,30 +130,30 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 </body>
 </html>";
         
-        $__internal_74ca140ecbdb28711e8332632c6817f38015afef2cb2d0c00d836d58a6534103->leave($__internal_74ca140ecbdb28711e8332632c6817f38015afef2cb2d0c00d836d58a6534103_prof);
+        $__internal_388379b439da5e6c3ed4022dd7142a12d5a1b4f4c8a3b2c44f7c01360fa63cc0->leave($__internal_388379b439da5e6c3ed4022dd7142a12d5a1b4f4c8a3b2c44f7c01360fa63cc0_prof);
 
     }
 
-    // line 66
+    // line 65
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_fc519d63971787cbac78c4faaa16d814002293a973b3046359b4f368d251d9d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fc519d63971787cbac78c4faaa16d814002293a973b3046359b4f368d251d9d4->enter($__internal_fc519d63971787cbac78c4faaa16d814002293a973b3046359b4f368d251d9d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_77841c67883c27a250e35f0d7a1d2f93d3eea3b71e9ef03d54502bc884fcb31c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77841c67883c27a250e35f0d7a1d2f93d3eea3b71e9ef03d54502bc884fcb31c->enter($__internal_77841c67883c27a250e35f0d7a1d2f93d3eea3b71e9ef03d54502bc884fcb31c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         
-        $__internal_fc519d63971787cbac78c4faaa16d814002293a973b3046359b4f368d251d9d4->leave($__internal_fc519d63971787cbac78c4faaa16d814002293a973b3046359b4f368d251d9d4_prof);
+        $__internal_77841c67883c27a250e35f0d7a1d2f93d3eea3b71e9ef03d54502bc884fcb31c->leave($__internal_77841c67883c27a250e35f0d7a1d2f93d3eea3b71e9ef03d54502bc884fcb31c_prof);
 
     }
 
-    // line 68
+    // line 67
     public function block_debat_bundle($context, array $blocks = array())
     {
-        $__internal_ed8ea7d9211a04a0615f24e656ba05b44f53c1674830f9ef280427cd3a3c04f2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_ed8ea7d9211a04a0615f24e656ba05b44f53c1674830f9ef280427cd3a3c04f2->enter($__internal_ed8ea7d9211a04a0615f24e656ba05b44f53c1674830f9ef280427cd3a3c04f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
+        $__internal_603820509122057dcd896285d8e69635a1b51054d6e1e2eb0da253cd8be49a6a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_603820509122057dcd896285d8e69635a1b51054d6e1e2eb0da253cd8be49a6a->enter($__internal_603820509122057dcd896285d8e69635a1b51054d6e1e2eb0da253cd8be49a6a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
 
         echo " ";
         
-        $__internal_ed8ea7d9211a04a0615f24e656ba05b44f53c1674830f9ef280427cd3a3c04f2->leave($__internal_ed8ea7d9211a04a0615f24e656ba05b44f53c1674830f9ef280427cd3a3c04f2_prof);
+        $__internal_603820509122057dcd896285d8e69635a1b51054d6e1e2eb0da253cd8be49a6a->leave($__internal_603820509122057dcd896285d8e69635a1b51054d6e1e2eb0da253cd8be49a6a_prof);
 
     }
 
@@ -167,7 +169,7 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
 
     public function getDebugInfo()
     {
-        return array (  147 => 68,  136 => 66,  118 => 69,  116 => 68,  113 => 67,  111 => 66,  106 => 63,  99 => 59,  92 => 55,  89 => 54,  73 => 41,  67 => 38,  60 => 34,  44 => 20,  42 => 13,  40 => 12,  32 => 7,  24 => 1,);
+        return array (  149 => 67,  138 => 65,  120 => 68,  118 => 67,  115 => 66,  113 => 65,  108 => 62,  101 => 58,  94 => 54,  91 => 53,  75 => 40,  69 => 37,  63 => 34,  56 => 30,  44 => 20,  42 => 13,  40 => 12,  32 => 7,  24 => 1,);
     }
 
     public function getSourceContext()
@@ -201,12 +203,11 @@ class __TwigTemplate_a105e55b610b82168366aab8a3a5891fec22775302f6418e4a52e4d8019
                         <span class=\"icon-bar\"></span>
                         <span class=\"icon-bar\"></span>
                     </button>
-                    <a class=\"navbar-brand\" style=\"color:white; font-weight: bold;\" href=\"#\">MasterDebat</a>
+                    <a class=\"navbar-brand\" style=\"color:white; font-weight: bold; font-size: 2em;\" href=\"{{ path('debat_home_grid') }}\">MasterDebat</a>
                 </div>
                 <div id=\"navbar\" class=\"navbar-collapse collapse\">
                     <ul class=\"nav navbar-nav\">
                         <li><a style=\"color:white;\" href=\"#\">User connected : {{ app.user.username }}</a></li>
-
                     </ul>
                     <ul class=\"nav navbar-nav navbar-right\">
                         <li><a style=\"color:white;\" href=\"{{ path('fos_user_security_logout') }}\">

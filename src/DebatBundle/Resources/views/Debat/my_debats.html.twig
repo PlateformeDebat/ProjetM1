@@ -1,25 +1,38 @@
 {% extends "UserBundle::layout.html.twig" %}
 
 {% block debat_bundle %}
-    <!-- controlleur OK, renvoie un tableau de 1 débat au hasard -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Catégories</a></li>
-                <li><a href="#">Afficher mes débats</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Liste de mes débats</a></li>
-            </ul>
+
+    <div class="container">
+        <nav class="navbar navbar-inverse nav-container">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a style="color:black;" href="{{ path('debat_categorie') }}">Catégories</a></li>
+                    <li><a style="color:black;" href="{{ path('debat_my_debats') }}">Afficher mes débats</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a style="color:black;" href="{{ path('debat_home_one') }}">Débat au hasard</a></li>
+                    <li><a style="color:black;" href="{{ path('debat_home_grid') }}">Grille de débats</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div style="margin-top: 15px;">
+                    {% for debat in debats %}
+                    <div style="padding: 10px 0; color: white;" class="col-sm-6 col-md-6">
+                        {{ debat.getTitre()|e }} {{ debat.getQuestion()|e }}
+                    </div>
+                    <div style="padding: 10px 0;" class="col-sm-6 col-md-6">
+                        <a class="a_grid" href="{{ path('debat_debat', {'id': debat.getId()|e }) }}">
+                            <button type="button" class="btn btn-secondary">Voir</button>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-    </nav>
-
-
-    Liste de mes débats
-
-    {% for debat in debats %}
-        <li>{{ debat.getTitre()|e }}</li>
-    {% endfor %}
+    </div>
 
 
 {% endblock debat_bundle %}

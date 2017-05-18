@@ -187,14 +187,40 @@ span.input-group-addon i {
     padding: 5px;
 }
 
-
 .div_grid {
-    padding: 10px;
-    color: white;
+    padding: 20px 10px;
+    color: black;
     font-size: medium;
 }
 
 .div_grid_in {
-    border: solid 1px white;
+    border: solid 1px black;
+    background-color: #ff99ff;
     padding: 10px;
+}
+
+.nav-container {
+    background-color: #b3d9ff;
+    color: black;
+    border-color: black;
+}
+
+.a_grid {
+    text-decoration: none;
+    color:black;
+}
+
+.a_grid:hover {
+    text-decoration: none;
+    color:black;
+}
+
+.a_grid:visited {
+    text-decoration: none;
+    color:black;
+}
+
+.btn_one {
+    margin: 20px 0;
+    font-size: 1.5em;
 }

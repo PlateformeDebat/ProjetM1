@@ -29,7 +29,7 @@ class MyDebatsController extends Controller
         $my_debats = array();
 
         for ($i = 0; $i < sizeof($debat_all); $i++) {
-            if ($debat_all[$i]->getId() == $me)
+            if ($debat_all[$i]->getIdCreateur() == $me)
             {
                 array_push($my_debats, $debat_all[$i]);
                 //var_dump($my_debats[0]);

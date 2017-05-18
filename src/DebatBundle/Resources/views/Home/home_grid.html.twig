@@ -5,13 +5,27 @@
 
 
     <div class="container">
+        <nav class="navbar navbar-inverse nav-container">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a style="color:black;" href="{{ path('debat_categorie') }}">Catégories</a></li>
+                    <li><a style="color:black;" href="{{ path('debat_my_debats') }}">Afficher mes débats</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a style="color:black;" href="{{ path('debat_home_one') }}">Débat au hasard</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="row">
-        {% for debat in tableau %}
+            {% for debat in tableau %}
             <div class="col-sm-6 col-md-4 div_grid">
-                <div class="text-center div_grid_in">
-                    <p style="font-weight: bold; font-size: 1.2em;">{{ debat.getTitre()|e }}</p>
-                    <p>{{ debat.getQuestion()|e }}</p>
-                </div>
+                <a class="a_grid" href="{{ path('debat_debat', {'id': debat.getId()|e }) }}">
+                    <div class="text-center div_grid_in">
+                        <p style="font-weight: bold; font-size: 1.2em;">{{ debat.getTitre()|e }}</p>
+                        <p>{{ debat.getQuestion()|e }}</p>
+                    </div>
+                </a>
             </div>
         {% endfor %}
         </div>
