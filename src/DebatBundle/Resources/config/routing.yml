@@ -33,3 +33,4 @@ vote_debat:
 argument_debat:
     path:     /argument
     defaults: { _controller: DebatBundle:Debat:argument }
+

@@ -21,20 +21,20 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5dbbf3aef0a537fd493fd6d9bf247e7a5b2550885550d37ef7abd5b78a4bbead = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5dbbf3aef0a537fd493fd6d9bf247e7a5b2550885550d37ef7abd5b78a4bbead->enter($__internal_5dbbf3aef0a537fd493fd6d9bf247e7a5b2550885550d37ef7abd5b78a4bbead_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DebatBundle:Home:home_one.html.twig"));
+        $__internal_22cae774be23e044a765d59c114d8453beec24eae7c582cb503343f5e36168dc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_22cae774be23e044a765d59c114d8453beec24eae7c582cb503343f5e36168dc->enter($__internal_22cae774be23e044a765d59c114d8453beec24eae7c582cb503343f5e36168dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DebatBundle:Home:home_one.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_5dbbf3aef0a537fd493fd6d9bf247e7a5b2550885550d37ef7abd5b78a4bbead->leave($__internal_5dbbf3aef0a537fd493fd6d9bf247e7a5b2550885550d37ef7abd5b78a4bbead_prof);
+        $__internal_22cae774be23e044a765d59c114d8453beec24eae7c582cb503343f5e36168dc->leave($__internal_22cae774be23e044a765d59c114d8453beec24eae7c582cb503343f5e36168dc_prof);
 
     }
 
     // line 3
     public function block_debat_bundle($context, array $blocks = array())
     {
-        $__internal_f50ca160ba5293c6a259a07630dfc68b4e6fa6d4658903b80cbbb609bbb8bdee = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f50ca160ba5293c6a259a07630dfc68b4e6fa6d4658903b80cbbb609bbb8bdee->enter($__internal_f50ca160ba5293c6a259a07630dfc68b4e6fa6d4658903b80cbbb609bbb8bdee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
+        $__internal_306cc929df800024123c513d9959926714c53c4dc29020d1186e460567e52cb6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_306cc929df800024123c513d9959926714c53c4dc29020d1186e460567e52cb6->enter($__internal_306cc929df800024123c513d9959926714c53c4dc29020d1186e460567e52cb6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "debat_bundle"));
 
         // line 4
         echo "
@@ -56,30 +56,34 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
         // line 13
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("debat_home_grid");
         echo "\">Grille de débats</a></li>
+                    <li><a style=\"color:black;\" href=\"";
+        // line 14
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("debat_add_debat");
+        echo "\">Rédiger un débat</a></li>
                 </ul>
             </div>
         </nav>
 
         <div class=\"row\">
             ";
-        // line 19
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tableau"]) || array_key_exists("tableau", $context) ? $context["tableau"] : (function () { throw new Twig_Error_Runtime('Variable "tableau" does not exist.', 19, $this->getSourceContext()); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tableau"]) || array_key_exists("tableau", $context) ? $context["tableau"] : (function () { throw new Twig_Error_Runtime('Variable "tableau" does not exist.', 20, $this->getSourceContext()); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["debat"]) {
-            // line 20
+            // line 21
             echo "                <div class=\"col-sm-12 col-md-12 div_grid\">
                     <a class=\"a_grid\" href=\"";
-            // line 21
+            // line 22
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("debat_debat", array("id" => twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["debat"], "id", array(), "method")))), "html", null, true);
             echo "\">
                         <div class=\"col-sm-12 col-md-12 text-center div_grid_in\">
                             <div class=\"col-sm-12 col-md-12\">
                                 <p style=\"font-weight: bold; font-size: 2em;\">";
-            // line 24
+            // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["debat"], "titre", array(), "method"));
             echo "</p>
                                 <p style=\"font-size: 1.5em;\">";
-            // line 25
+            // line 26
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["debat"], "getQuestion", array(), "method"));
             echo "</p>
                             </div>
@@ -87,19 +91,24 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
                                 <div class=\"row\">
                                     <div class=\"col-sm-12 col-md-12\">
                                         <button type=\"button\" class=\"btn_one btn btn-success\" DISABLED>";
-            // line 30
+            // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["debat"], "getReponse1", array(), "method"));
             echo "</button>
                                     </div>
                                     <div class=\"col-sm-12 col-md-12\">
                                         <button type=\"button\" class=\"btn_one btn btn-danger\" DISABLED>";
-            // line 33
+            // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["debat"], "getReponse2", array(), "method"));
             echo "</button>
                                     </div>
                                 </div>
-
-                                </div>
+                            </div>
+                            <div class=\"col-sm-6 col-md-6\">
+                                <a href=\"";
+            // line 39
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("debat_home_one");
+            echo "\"><img height=\"25%\" width=\"25%\" src=\"/Projet/src/DebatBundle/Resources/pictures/fleche.png\"> </a>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -108,14 +117,14 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['debat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 45
         echo "        </div>
     </div>
 
 
 ";
         
-        $__internal_f50ca160ba5293c6a259a07630dfc68b4e6fa6d4658903b80cbbb609bbb8bdee->leave($__internal_f50ca160ba5293c6a259a07630dfc68b4e6fa6d4658903b80cbbb609bbb8bdee_prof);
+        $__internal_306cc929df800024123c513d9959926714c53c4dc29020d1186e460567e52cb6->leave($__internal_306cc929df800024123c513d9959926714c53c4dc29020d1186e460567e52cb6_prof);
 
     }
 
@@ -131,7 +140,7 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
 
     public function getDebugInfo()
     {
-        return array (  112 => 42,  97 => 33,  91 => 30,  83 => 25,  79 => 24,  73 => 21,  70 => 20,  66 => 19,  57 => 13,  51 => 10,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  121 => 45,  109 => 39,  101 => 34,  95 => 31,  87 => 26,  83 => 25,  77 => 22,  74 => 21,  70 => 20,  61 => 14,  57 => 13,  51 => 10,  47 => 9,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -149,6 +158,7 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
                 </ul>
                 <ul class=\"nav navbar-nav navbar-right\">
                     <li><a style=\"color:black;\" href=\"{{ path('debat_home_grid') }}\">Grille de débats</a></li>
+                    <li><a style=\"color:black;\" href=\"{{ path('debat_add_debat') }}\">Rédiger un débat</a></li>
                 </ul>
             </div>
         </nav>
@@ -171,8 +181,10 @@ class __TwigTemplate_430a9dc3e16a321a39ff56ce10dcf0ce0d14239105217629ad69450567c
                                         <button type=\"button\" class=\"btn_one btn btn-danger\" DISABLED>{{ debat.getReponse2()|e }}</button>
                                     </div>
                                 </div>
-
-                                </div>
+                            </div>
+                            <div class=\"col-sm-6 col-md-6\">
+                                <a href=\"{{ path('debat_home_one') }}\"><img height=\"25%\" width=\"25%\" src=\"/Projet/src/DebatBundle/Resources/pictures/fleche.png\"> </a>
+                            </div>
                         </div>
                     </a>
                 </div>

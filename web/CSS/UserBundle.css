@@ -224,3 +224,50 @@ span.input-group-addon i {
     margin: 20px 0;
     font-size: 1.5em;
 }
+
+.debat-titre {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.debat-question {
+    color: white;
+    font-size: 1.5em;
+}
+
+.debat-boutton {
+    background: #99004d;
+    background-image: -webkit-linear-gradient(top, #99004d, #99004d);
+    background-image: -moz-linear-gradient(top, #99004d, #99004d);
+    background-image: -ms-linear-gradient(top, #99004d, #99004d);
+    background-image: -o-linear-gradient(top, #99004d, #99004d);
+    background-image: linear-gradient(to bottom, #99004d, #99004d);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.debat-argument {
+    width: 100%;
+    resize: none;
+}
+
+.padding-height {
+    padding: 40px 0;
+}
+
+.argument-contenu {
+    float:left;
+    height:200px;                /* taille du bloc moins la marge interne => IE */
+    width:100%;                 /* taille du bloc moins l'épaisseur de la bordure => IE*/
+    border:1px solid white;
+    margin: 20px 0;
+    padding:10px 10px 10px 10px;  /* padding haut, droit, bas, gauche*/
+    overflow:auto;
+    display: inline;
+}

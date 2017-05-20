@@ -11,6 +11,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a style="color:black;" href="{{ path('debat_home_grid') }}">Grille de débats</a></li>
+                    <li><a style="color:black;" href="{{ path('debat_add_debat') }}">Rédiger un débat</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,8 +34,10 @@
                                         <button type="button" class="btn_one btn btn-danger" DISABLED>{{ debat.getReponse2()|e }}</button>
                                     </div>
                                 </div>
-
-                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <a href="{{ path('debat_home_one') }}"><img height="25%" width="25%" src="/Projet/src/DebatBundle/Resources/pictures/fleche.png"> </a>
+                            </div>
                         </div>
                     </a>
                 </div>

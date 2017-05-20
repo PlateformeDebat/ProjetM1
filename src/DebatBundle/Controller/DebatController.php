@@ -5,6 +5,7 @@ namespace DebatBundle\Controller;
 use DateTime;
 use DateTimeZone;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use DebatBundle\Controller\ArgumentsController;
 use DebatBundle\Entity\Vote;
 use DebatBundle\Entity\Argument;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,7 +27,7 @@ class DebatController extends Controller
     public function indexAction(Request $request)
     {
         $deb = $request->query->get('id');
-        return $this->render('DebatBundle:Debat:debat.html.twig', array('argument'=>$this->findDebatById($deb)));
+        return $this->render('DebatBundle:Debat:debat.html.twig', array('debat'=>$this->findDebatById($deb), 'arguments'=>$this->argumentsOfDebat($deb, 1)));
     }
 
 
@@ -80,6 +81,8 @@ class DebatController extends Controller
             $argument->setIdDebat($id_debat);
             $argument->setContenu($texte);
             $argument->setDatePost($date);
+            $argument->setReponse($reponse);
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($argument);
@@ -128,8 +131,31 @@ class DebatController extends Controller
             }
         };
         return false;
-
     }
+
+
+    public function argumentsOfDebat($idD, $idR)
+    {
+        $tab = $this->findArgumentByIdDebat($idD);
+
+        $argsofdebat = array();
+
+        for ($i = 0; $i < sizeof($tab); $i++)  {
+            if ($tab[$i]->getReponse() == $idR)
+            {
+                array_push($argsofdebat, $tab[$i]);
+            }
+        }
+        return $argsofdebat;
+    }
+
+    public function findArgumentByIdDebat($parameter)
+    {
+        return $this->getDoctrine()->getManager()->getRepository('DebatBundle:Argument')->findBy(array('idDebat' => $parameter));
+    }
+
+
+
 
 
 

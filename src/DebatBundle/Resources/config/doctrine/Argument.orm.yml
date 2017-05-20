@@ -22,4 +22,7 @@ DebatBundle\Entity\Argument:
         datePost:
             type: date
             column: date_post
+        reponse:
+            type: string
+            length: 255
     lifecycleCallbacks: {  }

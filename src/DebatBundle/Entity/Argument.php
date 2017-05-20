@@ -32,6 +32,11 @@ class Argument
      */
     private $datePost;
 
+    /**
+     * @var string
+     */
+    private $reponse;
+
 
     /**
      * Get id
@@ -139,6 +144,28 @@ class Argument
         return $this->datePost;
     }
 
+    /**
+     * Set reponse
+     *
+     * @param string $reponse
+     *
+     * @return Argument
+     */
+    public function setReponse($reponse)
+    {
+        $this->reponse = $reponse;
 
+        return $this;
+    }
+
+    /**
+     * Get reponse
+     *
+     * @return string
+     */
+    public function getReponse()
+    {
+        return $this->reponse;
+    }
 
 }

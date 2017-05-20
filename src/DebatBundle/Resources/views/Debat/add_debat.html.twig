@@ -3,14 +3,17 @@
 {% block debat_bundle %}
     <!-- in work -->
 
-    <nav class="navbar navbar-inverse">
+<div class="container">
+    <nav class="navbar navbar-inverse nav-container">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
-                <li><a href="#">Catégories</a></li>
-                <li><a href="#">Afficher mes débats</a></li>
+                <li><a style="color:black;" href="{{ path('debat_categorie') }}">Catégories</a></li>
+                <li><a style="color:black;" href="{{ path('debat_my_debats') }}">Afficher mes débats</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Liste de mes débats</a></li>
+                <li><a style="color:black;" href="{{ path('debat_home_one') }}">Débat au hasard</a></li>
+                <li><a style="color:black;" href="{{ path('debat_home_grid') }}">Grille de débats</a></li>
+                <li><a style="color:black;" href="{{ path('debat_add_debat') }}">Rédiger un débat</a></li>
             </ul>
         </div>
     </nav>
@@ -108,6 +111,7 @@
     <div class="form-group">
         {{ form_widget(form.valider) }}
     </div>
+</div>
 
 
 {% endblock debat_bundle %}

@@ -2,14 +2,18 @@
 
 {% block debat_bundle %}
 <!-- controlleur OK, renvoie un tableau de 1 débat au hasard -->
-    <nav class="navbar navbar-inverse">
+
+<div class="container">
+
+    <nav class="navbar navbar-inverse nav-container">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
-                <li><a href="#">Catégories</a></li>
-                <li><a href="#">Afficher mes débats</a></li>
+                <li><a style="color:black;" href="{{ path('debat_categorie') }}">Catégories</a></li>
+                <li><a style="color:black;" href="{{ path('debat_my_debats') }}">Afficher mes débats</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Liste de mes débats</a></li>
+                <li><a style="color:black;" href="{{ path('debat_home_one') }}">Débat au hasard</a></li>
+                <li><a style="color:black;" href="{{ path('debat_add_debat') }}">Rédiger un débat</a></li>
             </ul>
         </div>
     </nav>
@@ -17,26 +21,34 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-10 col-md-12">
-                <p class="text-center">{{ argument.getTitre()|e }}</p>
-                <p class="text-center">{{ argument.getQuestion()|e }}</p>
+                <p class="text-center debat-titre">{{ debat.getTitre()|e }}</p>
+                <p class="text-center debat-question">{{ debat.getQuestion()|e }}</p>
             </div>
         </div>
         <div class="row">
+
+            <!-- answers -->
+
             <div class="col-sm-3 col-md-4 debat-padding">
                 <form method="post" action="{{ path('vote_debat') }}">
-                    <input type="hidden" name="id_debat" value="{{ argument.getId() }}">
+                    <input type="hidden" name="id_debat" value="{{ debat.getId() }}">
                     <input type="hidden" name="reponse" value="1">
-                    <input type="submit" class="center-block" value="{{ argument.getReponse1() }}" >
+                    <button type="submit" class="center-block debat-boutton" value="{{ debat.getReponse1() }}" >{{ debat.getReponse1() }}</button>
                 </form>
 
-                <form method="post" action="{{ path('argument_debat') }}">
-                    <label>
-                        <textarea name="argument"></textarea>
+                <div class="argument-contenu">
+                    {% for argument in arguments %}
+                        {{ argument.getIdEmetteur()|e }}
+                    {% endfor %}
+                </div>
+
+                <form class="padding-height" method="post" action="{{ path('argument_debat') }}">
+                    <label class="debat-argument">
+                        <textarea rows="2" name="argument" class="debat-argument"></textarea>
                     </label>
 
-                    <input type="hidden" name="id_debat" value="{{ argument.getId() }}">
+                    <input type="hidden" name="id_debat" value="{{ debat.getId() }}">
                     <input type="hidden" name="reponse" value="1">
-
                     <input type="submit" class="center-block" value="Valider" >
                 </form>
             </div>
@@ -51,24 +63,28 @@
 
             <div class="col-sm-3 col-md-4 debat-padding">
                 <form method="post" action="{{ path('vote_debat') }}">
-                    <input type="hidden" name="id_debat" value="{{ argument.getId() }}">
+                    <input type="hidden" name="id_debat" value="{{ debat.getId() }}">
                     <input type="hidden" name="reponse" value="2">
-                    <input type="submit" class="center-block" value="{{ argument.getReponse2() }}" >
+                    <button type="submit" class="center-block debat-boutton" value="{{ debat.getReponse2() }}" >{{ debat.getReponse2() }}</button>
                 </form>
 
-                <form method="post" action="{{ path('argument_debat') }}">
-                    <label>
-                        <textarea name="argument"></textarea>
+                <div class="argument-contenu">
+
+                </div>
+
+                <form class="padding-height" method="post" action="{{ path('argument_debat') }}">
+                    <label class="debat-argument">
+                        <textarea rows="2" name="argument" class="debat-argument"></textarea>
                     </label>
 
-                    <input type="hidden" name="id_debat" value="{{ argument.getId() }}">
-                    <input type="hidden" name="reponse" value="2">
-
+                    <input type="hidden" name="id_debat" value="{{ debat.getId() }}">
+                    <input type="hidden" name="reponse" value="1">
                     <input type="submit" class="center-block" value="Valider" >
                 </form>
             </div>
         </div>
     </div>
+</div>
 
 
 {% endblock debat_bundle %}
